@@ -80,14 +80,12 @@ if __name__ == '__main__':
                            "'\n{e}".format(d=device,
                                            tb=args.testbed_file,
                                            e=e))
-
         # Connect
         try:
             dev_obj.connect()
         except Exception as e:
             raise Exception("Could not connect to '{d}' - "
                             "Terminating\n{e}".format(d=device, e=e))
-
         # Collecting configuration. We are not shutting right away -
         # we want to have a clean log - where we can see all the configuration
         # being applied and not being hidden by the show commands
